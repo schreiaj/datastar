@@ -95,6 +95,7 @@ func setupExamples(ctx context.Context, router chi.Router, signals sessions.Stor
 				{ID: "replace_url_from_signals"},
 				{ID: "prefetch"},
 				{ID: "debounce_and_throttle"},
+				{ID: "optimistic_update"},
 			},
 		},
 		{
@@ -203,6 +204,7 @@ func setupExamples(ctx context.Context, router chi.Router, signals sessions.Stor
 			setupExamplesToggleVisibility(examplesRouter),
 			setupExamplesFormData(examplesRouter),
 			setupExamplesCustomValidity(examplesRouter),
+			setupExamplesOptimisticUpdate(examplesRouter),
 		); err != nil {
 			panic(fmt.Sprintf("error setting up examples routes: %s", err))
 		}
