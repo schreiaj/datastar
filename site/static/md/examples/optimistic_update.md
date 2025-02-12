@@ -4,7 +4,7 @@ While optimistic updates are not ideal, they are achievable with DataStar. The b
 that the users will see the update happening before it actually happens. Care must be taken to indicate to the user that
 this update is not fully persisted and may still fail.
 
-See the [indicator example](/examples/indicator) for a more correct way to indicate the state of a fetch request.
+See the [ui indicators how to](/how_tos/how_to_ui_indicators) for a more correct way to indicate the state of a fetch request.
 
 ## Demo
 

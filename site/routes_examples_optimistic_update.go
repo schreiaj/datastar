@@ -20,8 +20,7 @@ func setupExamplesOptimisticUpdate(examplesRouter chi.Router) error {
 		sse := datastar.NewSSE(w, r)
 		time.Sleep(2 * time.Second)
 		sse.MergeSignals([]byte("{name:''}"))
-		sse.RemoveFragments("#optimistic")
-		sse.MergeFragmentTempl(updateSucess(signals.Name), datastar.WithSelector("#list"), datastar.WithMergePrepend())
+		sse.MergeFragmentTempl(examplesOptimisticUpdateUpdateData(signals.Name), datastar.WithSelector("#optimistic"), datastar.WithMergeAfter())
 	})
 
 	return nil
